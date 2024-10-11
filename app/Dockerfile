@@ -13,17 +13,17 @@ COPY ./run_uwsgi.sh /opt/app
 COPY ./requirements.txt /opt/app
 COPY ./uwsgi/uwsgi.ini /opt/app
 
-# RUN  mkdir -p /var/www/static/ \
-#      && mkdir -p /var/www/media/ \
-#      && mkdir -p /opt/app/static/ \
-#      && mkdir -p /opt/app/media/ \
-#      && pip install --upgrade pip \
-#      && pip install -r requirements.txt
-
-RUN pip install --upgrade pip \
+RUN  mkdir -p /var/www/static/ \
+     && mkdir -p /var/www/media/ \
+     && mkdir -p /opt/app/static/ \
+     && mkdir -p /opt/app/media/ \
+     && pip install --upgrade pip \
      && pip install -r requirements.txt
 
-COPY . /opt/app
+# RUN pip install --upgrade pip \
+#      && pip install -r requirements.txt
+
+COPY . .
 
 EXPOSE 8000
 
