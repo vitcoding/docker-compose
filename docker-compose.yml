@@ -6,7 +6,7 @@ services:
   service:
     build: ./app
     volumes:
-      - static-theatre:/home/app/service/static
+      - static-theatre:/opt/app/static
     expose:
       - "8000"
     env_file:
@@ -17,7 +17,7 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - static-theatre:/home/app/service/static
+      - static-theatre:/opt/app/static
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./configs:/etc/nginx/conf.d:ro
     depends_on:
