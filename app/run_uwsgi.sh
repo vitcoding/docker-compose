@@ -4,6 +4,9 @@ set -e
 
 chown www-data:www-data /var/log
 
-# python manage.py collectstatic --no-input
+python manage.py makemigrations --no-input
+python manage.py migrate --no-input
 
-uwsgi --strict --ini /etc/app/uwsgi.ini
+python manage.py collectstatic --no-input
+
+uwsgi --strict --ini uwsgi.ini
