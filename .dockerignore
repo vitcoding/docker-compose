@@ -5,6 +5,8 @@ __pycache__/
 .idea
 */Dockerfile*
 .dockerignore
+.gitignore
+.github
 docker-compose.yml
 venv
 
