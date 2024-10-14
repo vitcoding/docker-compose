@@ -1,8 +1,7 @@
 __pycache__/
 .vscode/
 .venv/
-#.env
-#.env.example
+.env
 
 _temp/
 temp/

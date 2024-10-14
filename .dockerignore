@@ -1,17 +1,12 @@
-docker-compose.yml
-Dockerfile
-.env
-
-
-
-
-############################
-
 __pycache__/
 .vscode/
 .venv/
-#.env
-#.env.example
+.env
+.idea
+*/Dockerfile*
+.dockerignore
+docker-compose.yml
+venv
 
 _temp/
 temp/
