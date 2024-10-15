@@ -3,10 +3,10 @@ __pycache__/
 .venv/
 .env
 .idea
-*/Dockerfile*
 .dockerignore
 .gitignore
 .github
+Dockerfile
 docker-compose.yml
 venv
 
